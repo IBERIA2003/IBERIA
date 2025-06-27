@@ -5,90 +5,19 @@
     <meta charset="UTF-8">
     <title>IBERIA • Counter-Strike 1.6</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background-image: url('background.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            color: white;
-            text-align: center;
-            padding-top: 100px;
-        }
-
-        h1 {
-            font-size: 3em;
-            text-shadow: 2px 2px #000;
-            margin-bottom: 20px;
-        }
-
-        .ip-section {
-            background: rgba(0,0,0,0.6);
-            padding: 20px;
-            margin: 20px auto;
-            display: inline-block;
-            border: 2px solid red;
-            border-radius: 10px;
-        }
-
-        .copy-btn {
-            background-color: red;
-            border: none;
-            padding: 10px 20px;
-            color: white;
-            font-weight: bold;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-
-        .copy-btn:hover {
-            background-color: #ff4d4d;
-        }
-
-        .admins {
-            margin-top: 20px;
-            font-size: 1.1em;
-            background: rgba(0,0,0,0.5);
-            display: inline-block;
-            padding: 15px 30px;
-            border-radius: 10px;
-            border: 1px solid red;
-        }
-
-        .admins a {
-            color: #ff6666;
-            text-decoration: none;
-            display: block;
-            margin: 6px 0;
-        }
-
-        .download-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background-color: black;
-            color: red;
-            padding: 10px 15px;
-            border: 2px solid red;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .download-btn:hover {
-            background-color: red;
-            color: white;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<audio autoplay loop id="bg-music">
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
 
 <a href="https://cs.luxserv.ge/" target="_blank" class="download-btn">💾 ჩამოტვირთე CS 1.6</a>
 
-<h1>• • • I B E R I A • • •</h1>
+<h1 id="main-title">IBERIA</h1>
+
+<div class="countdown" id="countdown"></div>
 
 <div class="ip-section">
     <div>
@@ -104,14 +33,7 @@
     <a href="https://www.facebook.com/share/1ArDSsctd9/" target="_blank">მურიკო ხარაბაძე</a>
 </div>
 
-<script>
-    function copyIP() {
-        const ipText = document.getElementById("ip").innerText;
-        navigator.clipboard.writeText(ipText).then(() => {
-            alert("დაკოპირდა: " + ipText);
-        });
-    }
-</script>
-
+<canvas id="smoke"></canvas>
+<script src="script.js"></script>
 </body>
 </html>

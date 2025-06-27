@@ -1,0 +1,90 @@
+
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+#main-title {
+    font-size: 64px;
+    color: #ff0000;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #8b0000;
+    letter-spacing: 10px;
+    margin-top: 60px;
+}
+
+.download-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: black;
+    color: red;
+    padding: 10px 15px;
+    border: 2px solid red;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.download-btn:hover {
+    background-color: red;
+    color: white;
+}
+
+.ip-section {
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    margin: 20px auto;
+    display: inline-block;
+    border: 2px solid red;
+    border-radius: 10px;
+}
+
+.copy-btn {
+    background-color: red;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.copy-btn:hover {
+    background-color: #ff4d4d;
+}
+
+.admins {
+    margin-top: 20px;
+    font-size: 1.1em;
+    background: rgba(0,0,0,0.5);
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: 1px solid red;
+}
+
+.admins a {
+    color: #ff6666;
+    text-decoration: none;
+    display: block;
+    margin: 6px 0;
+}
+
+.countdown {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+canvas#smoke {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
