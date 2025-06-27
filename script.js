@@ -8,14 +8,23 @@ function copyIP() {
 
 function countdownTimer() {
     const countdown = document.getElementById("countdown");
-    const end = new Date();
-    end.setHours(end.getHours() + 1);
     function update() {
         const now = new Date();
-        const diff = Math.max(0, end - now);
-        const minutes = Math.floor(diff / 60000);
-        const seconds = Math.floor((diff % 60000) / 1000);
-        countdown.textContent = "დაიწყება: " + minutes + "წთ " + seconds + "წმ-ში";
+        let end = new Date();
+        end.setHours(0, 0, 0, 0); // 00:00 საათი
+
+        if (now >= end) {
+            // თუ უკვე 00:00-ზე მეტი დროა, გადავდოთ ხვალზე
+            end.setDate(end.getDate() + 1);
+        }
+
+        const diff = end - now;
+        const hours = Math.floor(diff / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        countdown.textContent = "მიქსი დაიწყება: " + hours + "სთ " + minutes + "წთ " + seconds + "წმ-ში";
+
         if (diff > 0) requestAnimationFrame(update);
     }
     update();
