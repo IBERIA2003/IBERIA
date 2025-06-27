@@ -1,112 +1,117 @@
+
 <!DOCTYPE html>
 <html lang="ka">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>I B E R I A • • •</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #0d0d0d url('https://i.imgur.com/GZ3gA5w.jpeg') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px;
-    }
+    <meta charset="UTF-8">
+    <title>IBERIA • Counter-Strike 1.6</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
+            padding-top: 100px;
+        }
 
-    h1 {
-      font-size: 3em;
-      color: #ff2d55;
-      letter-spacing: 5px;
-      margin-bottom: 0.5em;
-    }
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px #000;
+            margin-bottom: 20px;
+        }
 
-    .info-box {
-      background-color: rgba(0, 0, 0, 0.7);
-      border: 1px solid #ff2d55;
-      padding: 20px;
-      border-radius: 15px;
-      max-width: 600px;
-      width: 90%;
-      box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
-    }
+        .ip-section {
+            background: rgba(0,0,0,0.6);
+            padding: 20px;
+            margin: 20px auto;
+            display: inline-block;
+            border: 2px solid red;
+            border-radius: 10px;
+        }
 
-    .ip {
-      font-size: 1.5em;
-      margin: 15px 0;
-      font-weight: bold;
-    }
+        .copy-btn {
+            background-color: red;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
 
-    button {
-      background-color: #ff2d55;
-      color: white;
-      padding: 10px 20px;
-      font-size: 1em;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      margin-top: 10px;
-      transition: background-color 0.3s;
-    }
+        .copy-btn:hover {
+            background-color: #ff4d4d;
+        }
 
-    button:hover {
-      background-color: #e60039;
-    }
+        .admins {
+            margin-top: 20px;
+            font-size: 1.1em;
+            background: rgba(0,0,0,0.5);
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 10px;
+            border: 1px solid red;
+        }
 
-    .admins {
-      margin-top: 20px;
-      font-size: 1em;
-    }
+        .admins a {
+            color: #ff6666;
+            text-decoration: none;
+            display: block;
+            margin: 6px 0;
+        }
 
-    .admins a {
-      color: #ff2d55;
-      text-decoration: none;
-      display: block;
-      margin: 5px 0;
-    }
+        .download-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: black;
+            color: red;
+            padding: 10px 15px;
+            border: 2px solid red;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-    .admins a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2em;
-      }
-      .info-box {
-        padding: 15px;
-      }
-    }
-  </style>
+        .download-btn:hover {
+            background-color: red;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-  <h1>• • • I B E R I A • • •</h1>
-  <div class="info-box">
-    <div class="ip">IP: 80.241.246.26:222</div>
-    <button onclick="copyIP()">დააკოპირეთ IP</button>
-    <div class="admins">
-      <h3>დაუკავშირდით ადმინისტრაციას:</h3>
-      <a href="https://www.facebook.com/share/16eSdLJQis/" target="_blank">Giorgi Kiparoidze</a>
-      <a href="https://www.facebook.com/share/1WMRHKdu3N/" target="_blank">Giorgi Gagnidze</a>
-      <a href="https://www.facebook.com/share/1ArDSsctd9/" target="_blank">მურიკო ხარაბაძე</a>
-    </div>
-  </div>
 
-  <script>
+<a href="https://cs.luxserv.ge/" target="_blank" class="download-btn">💾 ჩამოტვირთე CS 1.6</a>
+
+<h1>• • • I B E R I A • • •</h1>
+
+<div class="ip-section">
+    <div>
+        <span id="ip">80.241.246.26:222</span>
+    </div>
+    <button class="copy-btn" onclick="copyIP()">დაკოპირება</button>
+</div>
+
+<div class="admins">
+    <strong>მთავარი ადმინისტრატორები:</strong>
+    <a href="https://www.facebook.com/share/16eSdLJQis/" target="_blank">Giorgi Kiparoidze</a>
+    <a href="https://www.facebook.com/share/1WMRHKdu3N/" target="_blank">Giorgi Gagnidze</a>
+    <a href="https://www.facebook.com/share/1ArDSsctd9/" target="_blank">მურიკო ხარაბაძე</a>
+</div>
+
+<script>
     function copyIP() {
-      const ip = "80.241.246.26:222";
-      navigator.clipboard.writeText(ip).then(() => {
-        alert("IP დაკოპირდა: " + ip);
-      }).catch(() => {
-        alert("ვერ დაკოპირდა IP");
-      });
+        const ipText = document.getElementById("ip").innerText;
+        navigator.clipboard.writeText(ipText).then(() => {
+            alert("დაკოპირდა: " + ipText);
+        });
     }
-  </script>
+</script>
+
 </body>
 </html>
