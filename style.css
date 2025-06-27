@@ -102,3 +102,18 @@ canvas#smoke {
     font-family: 'Orbitron', sans-serif;
     z-index: 1000;
 }
+
+
+#mix-info {
+    text-shadow: 0 0 5px red, 0 0 10px crimson, 0 0 20px darkred;
+    animation: pulseText 2s infinite alternate;
+}
+
+@keyframes pulseText {
+    0% {
+        text-shadow: 0 0 5px red, 0 0 10px crimson;
+    }
+    100% {
+        text-shadow: 0 0 10px red, 0 0 20px crimson, 0 0 30px darkred;
+    }
+}
