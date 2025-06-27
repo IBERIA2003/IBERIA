@@ -14,7 +14,6 @@ function countdownTimer() {
         end.setHours(0, 0, 0, 0); // 00:00 საათი
 
         if (now >= end) {
-            // თუ უკვე 00:00-ზე მეტი დროა, გადავდოთ ხვალზე
             end.setDate(end.getDate() + 1);
         }
 
@@ -30,6 +29,23 @@ function countdownTimer() {
     update();
 }
 countdownTimer();
+
+// Clock in bottom-right with Georgia Time (UTC+4)
+function updateClock() {
+    const now = new Date();
+    // Convert to Georgia time (UTC+4)
+    const georgiaOffset = 4 * 60; // minutes
+    const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+    const geoTime = new Date(utc + georgiaOffset * 60000);
+
+    let h = geoTime.getHours().toString().padStart(2, '0');
+    let m = geoTime.getMinutes().toString().padStart(2, '0');
+    let s = geoTime.getSeconds().toString().padStart(2, '0');
+
+    document.getElementById("realtime-clock").textContent = "🕒 " + h + ":" + m + ":" + s;
+    setTimeout(updateClock, 1000);
+}
+updateClock();
 
 // smoke effect
 const canvas = document.getElementById("smoke");

@@ -88,3 +88,17 @@ canvas#smoke {
     height: 100%;
     pointer-events: none;
 }
+
+
+#realtime-clock {
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    font-size: 16px;
+    background: rgba(0, 0, 0, 0.6);
+    color: red;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-family: 'Orbitron', sans-serif;
+    z-index: 1000;
+}
